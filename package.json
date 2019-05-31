@@ -1,5 +1,5 @@
 {
-  "name": "management-system",
+  "name": "smallfish-boilerplates-management-system",
   "version": "1.0.0",
   "scripts": {
     "start": "smallfish dev",
@@ -13,12 +13,10 @@
     "version": "smallfish -v",
     "lint": "smallfish lint --style",
     "precommit": "smallfish lint --staged --prettier --style --fix",
-    "ci": "smallfish lint --style && bigfish cov"
+    "ci": "smallfish lint --style && smallfish cov"
   },
   "dependencies": {
-    "ant-design-pro": "^2.1.1",
-    "smallfish": "^0.1.2",
-    "styled-components": "^4.2.0"
+    "smallfish": "^0.1.5"
   },
   "engines": {
     "install-node": "10"

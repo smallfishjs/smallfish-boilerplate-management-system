@@ -2,8 +2,7 @@ import React, { useState } from 'smallfish/react';
 import { withRouter } from 'smallfish/router';
 import { Layout, Menu, Icon } from 'smallfish/antd';
 import { Link } from 'smallfish/router';
-
-import styled from 'styled-components';
+import styled from 'smallfish/styled';
 
 const MLayout = styled(Layout)`
   position: fixed;

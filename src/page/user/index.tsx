@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'smallfish/react';
 import { Card } from 'smallfish/antd';
 
 const { Meta } = Card;
