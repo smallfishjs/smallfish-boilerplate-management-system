@@ -26,17 +26,18 @@ function ajax(url, method, params) {
 
   return extend(config)(url)
     .then(data => {
+      let msg = '';
       if (data.code === 'OVERTIME') {
         window.location.reload();
       }
       if (data.code === 'NOAUTH') {
-        data.msg = 'No authority!';
+        msg = 'No authority!';
       }
       if (data.code === 'SUCCESS') {
         return data.data;
       }
       message.destroy();
-      message.error(data.message || defaultErrorMessage);
+      message.error(msg || defaultErrorMessage);
       throw data;
     })
     .catch(error => {
