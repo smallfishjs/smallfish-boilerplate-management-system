@@ -15,8 +15,8 @@
     "precommit": "smallfish lint --staged --prettier --style --fix",
     "ci": "smallfish lint --style && smallfish cov"
   },
-  "devDependencies": {
-    "eslint-config-smallfish": "^0.1.5"
+  "dependencies": {
+    "smallfish": "^0.1.6"
   },
   "engines": {
     "install-node": "10"
