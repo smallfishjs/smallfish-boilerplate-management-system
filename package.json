@@ -15,9 +15,7 @@
     "precommit": "smallfish lint --staged --prettier --style --fix",
     "ci": "smallfish lint --style && smallfish cov"
   },
-  "dependencies": {
-    "smallfish": "^0.1.5"
-  },
+  "dependencies": {},
   "engines": {
     "install-node": "10"
   }

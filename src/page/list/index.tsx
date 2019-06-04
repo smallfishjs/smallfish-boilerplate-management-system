@@ -1,4 +1,4 @@
-import React from 'smallfish/react';
+import React, { useEffect } from 'smallfish/react';
 import { Card, List, Icon, Avatar } from 'smallfish/antd';
 import { connect } from 'smallfish/dva';
 
@@ -9,7 +9,13 @@ const IconText = ({ type, text }) => (
   </span>
 );
 
-export default connect(({ list }) => ({ list }))(({ list }) => {
+export default connect(({ list }) => ({ list }))(({ list, dispatch }) => {
+  useEffect(() => {
+    dispatch({
+      type: 'list/getList',
+    });
+  }, []);
+
   return (
     <Card style={{ margin: 24 }}>
       <List
@@ -17,7 +23,12 @@ export default connect(({ list }) => ({ list }))(({ list }) => {
         size="large"
         pagination={{
           onChange: page => {
-            console.log(page);
+            dispatch({
+              type: 'list/getList',
+              payload: {
+                page,
+              },
+            });
           },
           pageSize: 3,
         }}

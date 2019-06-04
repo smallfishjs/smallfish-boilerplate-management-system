@@ -1,8 +1,14 @@
 export default {
-  'POST /api/promo/queryConfig.json': {
-    stat: 'ok',
+  'GET /api/getUser': {
+    code: 'SUCCESS',
     data: {
-      currency: 'PHP',
+      id: '065454',
+      name: 'jack',
     },
+  },
+
+  'GET /api/getError': {
+    code: 'NOAUTH',
+    data: {},
   },
 };

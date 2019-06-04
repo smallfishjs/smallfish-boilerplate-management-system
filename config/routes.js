@@ -8,6 +8,11 @@ export default [
       { path: '/', component: 'home' },
       { path: '/list', component: 'list' },
       { path: '/user', component: 'user' },
+      { path: '/test', component: 'test' },
+      { path: '/private', component: 'private', Routes: ['src/page/auth'] },
+      {
+        component: '404',
+      },
     ],
   },
 ];

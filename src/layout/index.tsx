@@ -43,6 +43,9 @@ export default withRouter(props => {
   if (pathname.startsWith(`/user`)) {
     selectedKey = 'user';
   }
+  if (pathname.startsWith(`/test`)) {
+    selectedKey = 'test';
+  }
 
   return (
     <MLayout>
@@ -73,6 +76,18 @@ export default withRouter(props => {
             <Link to="/user">
               <Icon type="user" />
               <span>User</span>
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="test">
+            <Link to="/test">
+              <Icon type="alert" />
+              <span>Test</span>
+            </Link>
+          </Menu.Item>
+          <Menu.Item key="private">
+            <Link to="/private">
+              <Icon type="eye-invisible" />
+              <span>Private Route</span>
             </Link>
           </Menu.Item>
         </Menu>

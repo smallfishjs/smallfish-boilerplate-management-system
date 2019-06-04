@@ -1,22 +1,24 @@
-const listData = [];
-for (let i = 0; i < 23; i++) {
-  listData.push({
-    href: 'http://ant.design',
-    title: `ant design part ${i}`,
-    avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-    description:
-      'Ant Design, a design language for background applications, is refined by Ant UED Team.',
-    content:
-      'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
-  });
-}
+import { getList } from '@/service/list';
 
 export default {
   namespace: 'list',
   state: {
-    data: listData,
+    data: [],
   },
-  effects: {},
+  effects: {
+    *getList({ payload }, { call, put }) {
+      try {
+        const data = yield call(getList, { ...payload });
+        yield put({
+          type: 'setState',
+          payload: { data },
+        });
+        return data;
+      } catch (error) {
+        return Promise.reject(error);
+      }
+    },
+  },
   reducers: {
     setState(state, { payload }) {
       return { ...state, ...payload };
