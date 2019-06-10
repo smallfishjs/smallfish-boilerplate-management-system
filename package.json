@@ -12,6 +12,8 @@
     "help": "smallfish help",
     "version": "smallfish -v",
     "lint": "smallfish lint --style",
+    "docker:dev": "docker-compose -f ./docker/docker-compose.yml up",
+    "docker:build": "smallfish build && docker build -f Dockerfile -t smallfish-web ./",
     "precommit": "smallfish lint --staged --prettier --style --fix",
     "ci": "smallfish lint --style && smallfish cov"
   },
