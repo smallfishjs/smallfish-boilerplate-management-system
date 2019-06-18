@@ -1,3 +1,6 @@
 {
-  "extends": "smallfish/eslint"
+  "extends": "smallfish/tslint",
+  "rules": {
+    "quotes": [1, "single"]
+  }
 }

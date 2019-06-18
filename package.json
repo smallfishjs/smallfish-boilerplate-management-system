@@ -11,14 +11,14 @@
     "pack": "smallfish pack",
     "help": "smallfish help",
     "version": "smallfish -v",
-    "lint": "smallfish lint --style",
+    "lint": "smallfish lint",
     "docker:dev": "docker-compose -f ./docker/docker-compose.yml up",
     "docker:build": "smallfish build && docker build -f Dockerfile -t smallfish-web ./",
     "precommit": "smallfish lint --staged --prettier --style --fix",
     "ci": "smallfish lint --style && smallfish cov"
   },
   "dependencies": {
-    "smallfish": "^0.1.6"
+    "smallfish": "^0.1.8"
   },
   "engines": {
     "install-node": "10"
